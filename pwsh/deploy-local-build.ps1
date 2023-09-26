@@ -36,6 +36,7 @@ git checkout $b;
 cd $targePath
 cp ./deploy.ps1 ./deploy/deploy.ps1
 7z.exe a -r ./deploy.zip ./deploy
+Compress-Archive ./fe_stage3 ./fe_stage3.zip
 git add .
 git commit -m 'deploy';
 git push origin master;
